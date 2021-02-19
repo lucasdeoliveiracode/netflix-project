@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/main.css">
+
+    <!--owl css (jquery plugin)-->
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+
     <title>Netflix-project</title>
 </head>
 <body>
@@ -11,12 +16,71 @@
         <div class="container">
             <h2 class="logo">Netflix-project</h2>
             <nav>
-                <a href='#'>Início</a>
-                <a href='#'>Séries</a>
-                <a href='#'>Filmes</a>
-                <a href='#'>Documentários</a>
+                <div class="opcoes">
+                    <a href='#'>Home</a>
+                    <a href='#'>TV Shows</a>
+                    <a href='#'>Movies</a>
+                    <a href='#'>My List</a>
+                </div>
             </nav>
         </div>
     </header>
+
+    <main>
+        <div class="serie-principal">
+            <div class="container">
+                <h3 class="titulo">The Queen's Gambit</h3>
+                <p class="descricao">In a Kentucky orphanage in the 1950s, a young girl discovers an astonishing talent for chess while struggling with addiction.</p>
+                <div class="botoes">
+                    <button role="button" class="botao-play">
+                        <i class="fas fa-play"></i>
+                        PLAY
+                    </button>
+                    <button role="button" class="botao-lista">
+                        <i class="fas fa-plus"></i>
+                        MY LIST
+                    </button>
+                </div>    
+            </div>    
+        </div>
+    </main>
+
+    <div class="carrosel-filmes">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img class="box-serie" src="img/mini1.jpg" alt="daredevil">
+            </div>
+            <div class="item">
+                <img class="box-serie" src="img/mini2.jpg" alt="vikings">
+            </div>
+            <div class="item">
+                <img class="box-serie" src="img/mini3.jpg" alt="breakingbad">
+            </div>
+            <div class="item">
+                <img class="box-serie" src="img/mini4.jpg" alt="friends">
+            </div>
+            <div class="item">
+                <img class="box-serie" src="img/mini5.jpg" alt="pkyblinders">
+            </div>
+            <div class="item">
+                <img class="box-serie" src="img/mini6.jpg" alt="got">
+            </div>
+            <div class="item">
+                <img class="box-serie" src="img/mini7.jpg" alt="westworld">
+            </div>
+            <div class="item">
+                <img class="box-serie" src="img/mini8.jpg" alt="sherlock">
+            </div>
+            <div class="item">
+                <img class="box-serie" src="img/mini9.jpg" alt="mrrobot">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/b3128d6162.js" crossorigin="anonymous"></script>
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/owl/setup.js"></script>
 </body>
 </html>
