@@ -39,7 +39,7 @@
                     <button role="button" class="botao-play">
                         <i class="fas fa-play"></i>
                         PLAY
-                    </button>
+                    </button>   
                     <button role="button" class="botao-lista">
                         <i class="fas fa-plus"></i>
                         MY LIST
@@ -48,6 +48,32 @@
             </div>    
         </div>
     </main>
+
+    <div class="trailer">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CDrieqwSdgI"
+         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+        <span class="close">&times;</span>
+    </div>
+
+    <script>
+        const button = document.querySelector("button");
+        const trailer = document.querySelector(".trailer");
+        const close = document.querySelector(".close");
+        const video = document.querySelector("video");
+
+        button.addEventListener('click', ()=>{
+            trailer.style.visibility = "visible"
+            trailer.style.opacity = 1;            
+        });
+        close.addEventListener('click', ()=>{
+            trailer.style.visibility = "hidden"
+            trailer.style.opacity = 0;
+            
+            video.pause();
+            video.currentTime = 0;
+        });
+    </script>
 
     <div class="carrosel-filmes">
         <p class="trending">Trending Now</p>
@@ -81,7 +107,6 @@
             </div>
         </div>
     </div>
-
 
     <script src="https://kit.fontawesome.com/b3128d6162.js" crossorigin="anonymous"></script>
     <script src="js/owl/jquery.min.js"></script>

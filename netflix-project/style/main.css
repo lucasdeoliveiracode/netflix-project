@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: .3s;
 }
 
 body{
@@ -43,10 +44,10 @@ header nav a:hover{
     color: #fff;
 }
 
-/*lista séries*/
+/*lista séries-*/
 .serie-principal{
     font-size: 20px;
-    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('/img/capa-queens2.jpg');
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('../img/capa-queens-gambit.jpg');
 
     height: 450px;
     background-size: cover;
@@ -137,4 +138,44 @@ header nav a:hover{
     margin-bottom: 10px;
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.trailer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: rgba(0,0,0, .9);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.trailer video{
+    position: relative;
+    max-width: 900px;
+    outline: none;
+}
+
+.trailer.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.close{
+    position: relative;
+    margin-bottom: 300px;
+    cursor: pointer;
+    font-size: 60px;
+}
+
+@media (max-width: 901px){
+    .trailer video{
+        max-width: 90%;
+    }
 }
