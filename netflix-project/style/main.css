@@ -11,7 +11,7 @@
 
 body{
     background: var(--preto);
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Arial', Times, serif;
     color: white;
 }
 
@@ -23,7 +23,7 @@ header .container{
 }
 header .opcoes{
     margin-left: 80px;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 header .logo{
@@ -45,10 +45,10 @@ header nav a:hover{
 
 /*lista séries*/
 .serie-principal{
-    font-size: 16px;
-    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('/img/capa-queens.jpg');
+    font-size: 20px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('/img/capa-queens2.jpg');
 
-    height: 400px;
+    height: 450px;
     background-size: cover;
 
     display: flex;
@@ -63,9 +63,10 @@ header nav a:hover{
 }
 
 .serie-principal .titulo{
-    margin-top: 15%;
-    font-size: 40px;
+    font-size: 50px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--vermelho);
+    margin-bottom: 15px;
 }
 
 .botao-play{
@@ -124,4 +125,16 @@ header nav a:hover{
     height: 100%;
     width: 100%;
     display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.trending{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
 }
