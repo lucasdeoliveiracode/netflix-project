@@ -34,20 +34,75 @@
             <div class="container">
                 <h3 class="titulo">The Queen's Gambit</h3>
                 <p class="descricao">The Queen's Gambit follows the life of an orphan chess prodigy, Elizabeth Harmon, during her quest to become the world's greatest chess player
-                                     while struggling with emotional problems and drug and alcohol dependency. </p>
-                <div class="botoes">
-                    <button role="button" class="botao-play">
-                        <i class="fas fa-play"></i>
-                        PLAY
-                    </button>   
-                    <button role="button" class="botao-lista">
-                        <i class="fas fa-plus"></i>
-                        MY LIST
-                    </button>
-                </div>    
+                                     while struggling with emotional problems and drug and alcohol dependency. 
+                </p>
+                <a class="botao-play">
+                    <i class="fas fa-play"></i>
+                    PLAY
+                </a> 
+     
+                <a class="botao-lista">
+                    <i class="fas fa-plus"></i>
+                    MY LIST
+                </a>   
             </div>    
         </div>
     </main>
+
+    <div class="carrosel-filmes">
+        <p class="trending">Trending Now</p>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="img/mini1.jpg" alt="daredevil">
+                <div class="box-serie">
+                    <a>
+                        <i class="fas fa-play"></i>
+                    </a>   
+                    <a>
+                        <i class="fas fa-plus"></i>
+                    </a>
+                    <a>
+                        <i class="fas fa-info-circle"></i>
+                    </a>
+                </div>  
+            </div>
+            <div class="item">
+                <img src="img/mini2.jpg" alt="vikings">
+                <div class="box-serie">
+                    <a>
+                        <i class="fas fa-play"></i>
+                    </a>   
+                    <a>
+                        <i class="fas fa-plus"></i>
+                    </a>
+                    <a>
+                        <i class="fas fa-info-circle"></i>
+                    </a>
+                </div>  
+            </div>
+            <div class="item">
+                <img src="img/mini3.jpg" alt="breakingbad">
+            </div>
+            <div class="item">
+                <img src="img/mini4.jpg" alt="friends">
+            </div>
+            <div class="item">
+                <img src="img/mini5.jpg" alt="pkyblinders">
+            </div>
+            <div class="item">
+                <img src="img/mini6.jpg" alt="got">
+            </div>
+            <div class="item">
+                <img src="img/mini7.jpg" alt="westworld">
+            </div>
+            <div class="item">
+                <img src="img/mini8.jpg" alt="sherlock">
+            </div>
+            <div class="item">
+                <img src="img/mini9.jpg" alt="mrrobot">
+            </div>
+        </div>
+    </div>
 
     <div class="trailer">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/CDrieqwSdgI"
@@ -57,15 +112,20 @@
     </div>
 
     <script>
-        const button = document.querySelector("button");
+        const btn = document.getElementsByClassName("fas fa-play");
         const trailer = document.querySelector(".trailer");
         const close = document.querySelector(".close");
-        const video = document.querySelector("video");
+        const video = document.querySelector("iframe");
 
-        button.addEventListener('click', ()=>{
-            trailer.style.visibility = "visible"
-            trailer.style.opacity = 1;            
-        });
+        for(var i = 0; i < btn.length; i++) {
+            (function(watch) {
+                btn[watch].addEventListener("click", function() {
+                    trailer.style.visibility = "visible"
+                    trailer.style.opacity = 1;    
+                })
+            })(i);
+            }
+
         close.addEventListener('click', ()=>{
             trailer.style.visibility = "hidden"
             trailer.style.opacity = 0;
@@ -74,39 +134,6 @@
             video.currentTime = 0;
         });
     </script>
-
-    <div class="carrosel-filmes">
-        <p class="trending">Trending Now</p>
-        <div class="owl-carousel owl-theme">
-            <div class="item">
-                <img class="box-serie" src="img/mini1.jpg" alt="daredevil">
-            </div>
-            <div class="item">
-                <img class="box-serie" src="img/mini2.jpg" alt="vikings">
-            </div>
-            <div class="item">
-                <img class="box-serie" src="img/mini3.jpg" alt="breakingbad">
-            </div>
-            <div class="item">
-                <img class="box-serie" src="img/mini4.jpg" alt="friends">
-            </div>
-            <div class="item">
-                <img class="box-serie" src="img/mini5.jpg" alt="pkyblinders">
-            </div>
-            <div class="item">
-                <img class="box-serie" src="img/mini6.jpg" alt="got">
-            </div>
-            <div class="item">
-                <img class="box-serie" src="img/mini7.jpg" alt="westworld">
-            </div>
-            <div class="item">
-                <img class="box-serie" src="img/mini8.jpg" alt="sherlock">
-            </div>
-            <div class="item">
-                <img class="box-serie" src="img/mini9.jpg" alt="mrrobot">
-            </div>
-        </div>
-    </div>
 
     <script src="https://kit.fontawesome.com/b3128d6162.js" crossorigin="anonymous"></script>
     <script src="js/owl/jquery.min.js"></script>

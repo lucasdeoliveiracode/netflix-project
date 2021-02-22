@@ -122,10 +122,13 @@ header nav a:hover{
     width: 70%;
 }
 
-.box-serie{
+.item{
     height: 100%;
     width: 100%;
-    display: block;
+    display: flex;
+    cursor: pointer;
+    transition: .6s ease-out;
+    box-shadow: 0 10px 10px rgba(0,0,0, .5);
 }
 
 .carrosel-filmes{
@@ -179,3 +182,70 @@ header nav a:hover{
         max-width: 90%;
     }
 }
+
+.item:hover{
+    transform: translateY(15px);
+}
+
+.item:hover:before{
+    opacity: 1;
+}
+
+.item:hover .box-serie{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.item:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #000, transparent);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.item .box-serie{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.box-serie{
+    position: relative;
+    z-index: 3;
+    color: #FFF;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 0.5s;
+}
+/*
+.box-serie a{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+    text-decoration: none;
+}   
+*/
+.box-serie a i{
+    color: #fff;
+    padding: 6px 7px;
+    margin-top: 310px;
+    border: 1px solid #fff;
+    font-size: 30px;
+    justify-content: center;
+    margin-inline-start: 28px;
+}
+
+
